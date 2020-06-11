@@ -1,0 +1,18 @@
+{
+  "sqltools.connections": [
+    {
+      "askForPassword": false,
+      "database": "heroku_f8d61ecf0567e09",
+      "driver": "MySQL",
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "name": "banco_heroku",
+      "password": "1dc8d779",
+      "port": 3306,
+      "previewLimit": 50,
+      "server": "us-cdbr-east-05.cleardb.net",
+      "username": "bd90806c2a5c7c"
+    }
+  ]
+}
