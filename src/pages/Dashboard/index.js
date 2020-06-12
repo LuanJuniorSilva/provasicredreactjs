@@ -1,21 +1,15 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { signOut } from '../../store/modules/auth/actions';
 
-// import { Container } from './styles';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 function Dashboard() {
-  const dispatch = useDispatch();
-
-  function habdleSignOut() {
-    dispatch(signOut());
-  }
-
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <button onClick={habdleSignOut}>SAIR</button>
-    </div>
+    <>
+      <Header />
+      <div></div>
+      <Footer />
+    </>
   );
 }
 
