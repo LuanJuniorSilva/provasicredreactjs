@@ -11,8 +11,6 @@ function Header() {
   const dispatch = useDispatch();
   const user = useSelector(state => state.user.profile);
 
-  console.log(user);
-
   function handleSignOut() {
     dispatch(signOut());
   }
