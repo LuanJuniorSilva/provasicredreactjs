@@ -2,7 +2,7 @@ import { takeLatest, call, put, all } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
 
 import history from '../../../services/history';
-import apiLogin from '../../../services/api';
+import { apiLogin } from '../../../services/api';
 
 import { signInSuccess, signFailure } from './actions';
 
