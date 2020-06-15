@@ -1,9 +1,13 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { FooterWrap } from './styles';
 
 function Footer() {
-  return <div />;
+  return (
+    <FooterWrap>
+      <p>&copy; Todos os direitos reservados para Dragon </p>
+    </FooterWrap>
+  );
 }
 
 export default Footer;
