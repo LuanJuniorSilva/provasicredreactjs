@@ -27,7 +27,7 @@ export function* deleteDragon({ id }) {
 
     yield put(deleteDragonSuccess(id));
   } catch (error) {
-    toast.error('Falha ao buscar dragão');
+    toast.error('Falha ao deletar dragão');
     yield put(dragonFailure());
   }
 }

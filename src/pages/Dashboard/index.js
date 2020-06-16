@@ -6,6 +6,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 import Alert from '../../components/Alert';
+import Loader from '../../components/Loader';
 
 import {
   getDragonsRequest,
@@ -14,7 +15,7 @@ import {
 
 function Dashboard() {
   const dispatch = useDispatch();
-  const { dragons } = useSelector(state => state.dragon);
+  const { dragons, loading } = useSelector(state => state.dragon);
 
   useEffect(() => {
     dispatch(getDragonsRequest());
@@ -26,6 +27,8 @@ function Dashboard() {
 
   return (
     <>
+      {dragons.length === 0 && <Loader />}
+      {loading && <Loader />}
       <Header />
       <section>
         <Link to="/formedit">CADASTRAR NOVO DRAGÃO</Link>

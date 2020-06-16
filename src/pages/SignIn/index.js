@@ -17,7 +17,6 @@ const schema = Yup.object().shape({
 
 export default function SignIn() {
   const dispatch = useDispatch();
-  const loading = useSelector(state => state.auth.loading);
 
   function handleSubmit({ email, password }) {
     dispatch(signInRequest(email, password));
@@ -31,7 +30,7 @@ export default function SignIn() {
         <Input type="email" name="email" placeholder="Seu e-mail" />
         <Input type="password" name="password" placeholder="Sua senha" />
 
-        <button type="submit">{loading ? 'Carregando...' : 'Acessar'}</button>
+        <button type="submit">Acessar</button>
         <Link to="/register">Criar conta gratuita</Link>
       </Form>
     </>

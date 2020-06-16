@@ -22,6 +22,10 @@ export default function user(state = INITIAL_STATE, action) {
         draft.loading = true;
         break;
       }
+      case '@dragon/DELETE_REQUEST': {
+        draft.loading = true;
+        break;
+      }
       case '@dragon/DELETE_SUCCESS': {
         draft.dragons = state.dragons.filter(
           dragon => dragon.id !== action.payload.id
