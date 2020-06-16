@@ -15,8 +15,6 @@ function Dashboard() {
     dispatch(getDragonsRequest());
   }, []);
 
-  console.log('dragons', dragons);
-
   return (
     <>
       <Header />
