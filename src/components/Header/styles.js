@@ -11,11 +11,16 @@ export const HeaderWrap = styled.header`
 `;
 
 export const Container = styled.div`
-  max-width: 1200px;
+  max-width: 80%;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .fa-angle-left {
+    font-size: 30px;
+    cursor: pointer;
+  }
 `;
 
 export const Logo = styled.div`
@@ -38,4 +43,11 @@ export const Logout = styled.button`
   &:hover {
     color: #fff;
   }
+`;
+
+export const ContainerLogo = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
 `;
