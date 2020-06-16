@@ -18,6 +18,15 @@ export default function user(state = INITIAL_STATE, action) {
         draft.loading = false;
         break;
       }
+      case '@dragon/REQUEST_ALL': {
+        draft.loading = true;
+        break;
+      }
+      case '@dragon/GET_SUCCESS': {
+        draft.dragon = action.payload.dragon;
+        draft.loading = false;
+        break;
+      }
       case '@dragon/DRAGON_FAILURE': {
         draft.loading = false;
         break;

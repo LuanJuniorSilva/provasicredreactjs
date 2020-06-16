@@ -16,3 +16,17 @@ export function dragonFailure() {
     type: '@dragon/DRAGON_FAILURE',
   };
 }
+
+export function getDragonRequest(id) {
+  return {
+    type: '@dragon/GET_REQUEST',
+    id,
+  };
+}
+
+export function getDragonSuccess(dragon) {
+  return {
+    type: '@dragon/GET_SUCCESS',
+    payload: { dragon },
+  };
+}
