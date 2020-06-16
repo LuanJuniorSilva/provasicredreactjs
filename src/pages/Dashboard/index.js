@@ -41,14 +41,14 @@ function Dashboard() {
                 <td>{dragon.type}</td>
                 <td>{dragon.history}</td>
                 <td>
-                  <Link>
-                    <i class="far fa-list-alt"></i>
+                  <Link to={`/dragon/${dragon.id}`}>
+                    <i className="fas fa-list-alt"></i>
                   </Link>
                   <Link>
-                    <i class="fas fa-pen"></i>
+                    <i className="fas fa-pen"></i>
                   </Link>
                   <Link>
-                    <i class="fas fa-trash-alt"></i>
+                    <i className="fas fa-trash-alt"></i>
                   </Link>
                 </td>
               </tr>
