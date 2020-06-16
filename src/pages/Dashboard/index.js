@@ -19,7 +19,7 @@ function Dashboard() {
     <>
       <Header />
       <section>
-        <Link to="/createDragon">CADASTRAR NOVO DRAGÃO</Link>
+        <Link to="/formedit">CADASTRAR NOVO DRAGÃO</Link>
 
         <table>
           <thead>
@@ -42,7 +42,7 @@ function Dashboard() {
                   <Link to={`/dragon/${dragon.id}`}>
                     <i className="fas fa-list-alt"></i>
                   </Link>
-                  <Link>
+                  <Link to={`/formedit/${dragon.id}`}>
                     <i className="fas fa-pen"></i>
                   </Link>
                   <Link>

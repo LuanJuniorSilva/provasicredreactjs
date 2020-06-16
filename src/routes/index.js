@@ -16,8 +16,8 @@ const Routes = () => (
 
     <Route path="/dashboard" component={Dashboard} isPrivate />
     <Route path="/dragon/:id" component={Dragon} isPrivate />
-    <Route path="/formedit/" component={FormEdit} isPrivate />
     <Route path="/formedit/:id" component={FormEdit} isPrivate />
+    <Route path="/formedit/" component={FormEdit} isPrivate />
 
     <Route path="/" component={() => <h1>404</h1>} />
   </Switch>
