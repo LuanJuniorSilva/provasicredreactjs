@@ -17,16 +17,16 @@ export function dragonFailure() {
   };
 }
 
-export function getDragonRequest(id) {
+export function deleteDragonRequest(id) {
   return {
-    type: '@dragon/GET_REQUEST',
+    type: '@dragon/DELETE_REQUEST',
     id,
   };
 }
 
-export function getDragonSuccess(dragon) {
+export function deleteDragonSuccess(id) {
   return {
-    type: '@dragon/GET_SUCCESS',
-    payload: { dragon },
+    type: '@dragon/DELETE_SUCCESS',
+    payload: { id },
   };
 }

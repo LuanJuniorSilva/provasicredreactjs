@@ -5,7 +5,12 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-import { getDragonsRequest } from '../../store/modules/dragon/actions';
+import Alert from '../../components/Alert';
+
+import {
+  getDragonsRequest,
+  deleteDragonRequest,
+} from '../../store/modules/dragon/actions';
 
 function Dashboard() {
   const dispatch = useDispatch();
@@ -14,6 +19,10 @@ function Dashboard() {
   useEffect(() => {
     dispatch(getDragonsRequest());
   }, []);
+
+  async function handleDelete(id) {
+    dispatch(deleteDragonRequest(id));
+  }
 
   return (
     <>
@@ -45,9 +54,14 @@ function Dashboard() {
                   <Link to={`/formedit/${dragon.id}`}>
                     <i className="fas fa-pen"></i>
                   </Link>
-                  <Link>
-                    <i className="fas fa-trash-alt"></i>
-                  </Link>
+                  <i
+                    className="fas fa-trash-alt"
+                    onClick={() =>
+                      Alert(() => {
+                        handleDelete(dragon.id);
+                      })
+                    }
+                  ></i>
                 </td>
               </tr>
             ))}

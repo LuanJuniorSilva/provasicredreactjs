@@ -1,7 +1,11 @@
 import { takeLatest, call, put, all } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
 
-import { getDragonsSuccess, dragonFailure, getDragonSuccess } from './actions';
+import {
+  getDragonsSuccess,
+  dragonFailure,
+  deleteDragonSuccess,
+} from './actions';
 import { apiDefault } from '../../../services/api';
 
 export function* getAllDragons() {
@@ -17,13 +21,11 @@ export function* getAllDragons() {
   }
 }
 
-export function* getDragon({ id }) {
+export function* deleteDragon({ id }) {
   try {
-    const response = yield call(apiDefault.get, `/${id}`);
+    yield call(apiDefault.delete, `/${id}`);
 
-    const dragon = response.data;
-
-    yield put(getDragonSuccess(dragon));
+    yield put(deleteDragonSuccess(id));
   } catch (error) {
     toast.error('Falha ao buscar dragão');
     yield put(dragonFailure());
@@ -32,5 +34,5 @@ export function* getDragon({ id }) {
 
 export default all([
   takeLatest('@dragon/GET_ALL_REQUEST', getAllDragons),
-  takeLatest('@dragon/GET_REQUEST', getDragon),
+  takeLatest('@dragon/DELETE_REQUEST', deleteDragon),
 ]);

@@ -58,7 +58,8 @@ export const Wrapper = styled.div`
         padding: 15px;
       }
 
-      td > a {
+      td > a,
+      td > i {
         display: inline-block;
         font-size: 18px;
         margin-left: 10px;
@@ -76,8 +77,9 @@ export const Wrapper = styled.div`
         color: ${darken(0.1, '#0000ff')};
       }
 
-      td > a:nth-child(3) {
+      td > i:nth-child(3) {
         color: ${darken(0.1, '#ff0000')};
+        cursor: pointer;
       }
     }
   }
