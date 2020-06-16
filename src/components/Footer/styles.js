@@ -8,6 +8,8 @@ export const FooterWrap = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: 0;
 
   p {
     color: #fff;
